@@ -37,3 +37,8 @@ def order(user):
         contact_phone="+00000001",
         address="Test_adress_field_1",
     )
+
+
+@pytest.fixture()
+def category():
+    return Category.objects.create(name="Category")

@@ -20,3 +20,10 @@ def user():
 @pytest.fixture
 def api_client():
     return APIClient()
+
+
+@pytest.fixture
+def super_user():
+    return django.contrib.auth.models.User.objects.create_superuser(
+        username="restsuperuser", password="password_test_super_user"
+    )
